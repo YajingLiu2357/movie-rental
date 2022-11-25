@@ -5,6 +5,8 @@ import Category from '../views/Category/Category.vue'
 import Admin from '../views/Admin';
 import Product from "../views/Product/Product";
 import AddProduct from "../views/Product/AddProduct";
+import EditCategory from "../views/Category/EditCategory";
+import EditProduct from "@/views/Product/EditProduct";
 
 const routes = [
   {
@@ -31,6 +33,11 @@ const routes = [
     Component: Category
   },
   {
+    path: '/admin/category/edit/:id',
+    name: 'EditCategory',
+    component: EditCategory
+  },
+  {
     path: '/admin',
     name: 'Admin',
     component: Admin
@@ -44,7 +51,12 @@ const routes = [
     path: '/admin/product/new',
     name: 'AddProduct',
     component: AddProduct
-  }
+  },
+  {
+    path: '/admin/product/edit/:id',
+    name: 'EditProduct',
+    component: EditProduct
+  },
 ]
 
 const router = createRouter({
