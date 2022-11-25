@@ -29,6 +29,7 @@
   </div>
 </template>
 <script>
+
 const axios = require('axios');
 const sweetalert = require('sweetalert');
 export default {

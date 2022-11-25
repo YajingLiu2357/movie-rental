@@ -4,6 +4,7 @@
     <router-link to="/about">About</router-link>
   </div>
   <router-view
+      :baseURL = "baseURL"
       :categories="categories"
       :products="products">
   </router-view>
@@ -27,13 +28,13 @@ export default {
   methods: {
     async fetchData(){
       // api call to get all categories
-      await axios.get(this.baseURL + "/api/category")
+      await axios.get(this.baseURL + "/api/category/")
           .then(res => {
             this.categories = res.data;
           }).catch(err => console.log('err', err));
 
       // api call to get all products
-      await axios.get(this.baseURL + "/api/products")
+      await axios.get(this.baseURL + "/api/product/")
           .then(res => {
             this.products = res.data;
           }).catch(err => console.log('err', err));

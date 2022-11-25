@@ -33,7 +33,7 @@ public class ProductController {
         return new ResponseEntity<>(new ApiResponse(true, "product has been added"), HttpStatus.CREATED);
     }
 
-    @GetMapping("/")
+    @GetMapping("/list")
     public ResponseEntity<List<ProductDto>> getProducts(){
         List<ProductDto> products = productService.getAllProducts();
         return new ResponseEntity<>(products, HttpStatus.OK);
