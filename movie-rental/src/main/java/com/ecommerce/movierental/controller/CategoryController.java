@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/category")
+@RequestMapping("/category")
 
 public class CategoryController {
     @Autowired
@@ -23,7 +23,7 @@ public class CategoryController {
         return new ResponseEntity<ApiResponse>(new ApiResponse(true, "a new category created"), HttpStatus.CREATED);
     }
 
-    @GetMapping("/list")
+    @GetMapping("/")
     public List<Category> listCategory() {
         return categoryService.listCategory();
     }

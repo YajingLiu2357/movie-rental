@@ -25,7 +25,7 @@ export default {
   },
   data() {
     return{
-      baseUrl : "https://limitless-lake-55070.herokuapp.com",
+      baseUrl : "http://localhost:8080/",
     };
   },
   methods:{

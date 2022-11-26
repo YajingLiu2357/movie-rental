@@ -18,7 +18,7 @@ export default {
   components: {Navbar, Footer},
   data(){
     return {
-      baseURL : "https://limitless-lake-55070.herokuapp.com/",
+      baseURL : "http://localhost:8080/",
       products: null,
       categories: null,
 
