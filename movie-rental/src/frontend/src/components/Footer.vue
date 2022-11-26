@@ -4,80 +4,40 @@
     <div class="row">
       <div class="col-md-3 col-6">
         <ul style="list-style-type: none">
-          <li class="text-light font weight-bold pb-2">Get to know us</li>
+          <li class="text-light font weight-bold pb-2">About me</li>
           <li>
-            <a class="footer-link font-weight-light" href="#">
-            About us
-            </a>
-          </li>
-          <li>
-            <a class="footer-link font-weight-light" href="#">
-              Android App
-            </a>
-          </li>
-          <li>
-            <a class="footer-link font-weight-light" href="#">
-              ios App
+            <a class="footer-link font-weight-light" href="https://github.com/YajingLiu2357">
+            Github
             </a>
           </li>
         </ul>
       </div>
       <div class="col-md-3 col-6">
         <ul style="list-style-type: none">
-          <li class="text-light font weight-bold pb-2">Connect with us</li>
+          <li class="text-light font weight-bold pb-2">About me</li>
           <li>
-            <a class="footer-link font-weight-light" href="#">
-              About us
-            </a>
-          </li>
-          <li>
-            <a class="footer-link font-weight-light" href="#">
-              Android App
-            </a>
-          </li>
-          <li>
-            <a class="footer-link font-weight-light" href="#">
-              ios App
+            <a class="footer-link font-weight-light" href="https://github.com/YajingLiu2357">
+              Github
             </a>
           </li>
         </ul>
       </div>
       <div class="col-md-3 col-6">
         <ul style="list-style-type: none">
-          <li class="text-light font weight-bold pb-2">Make money with us</li>
+          <li class="text-light font weight-bold pb-2">About me</li>
           <li>
-            <a class="footer-link font-weight-light" href="#">
-              About us
-            </a>
-          </li>
-          <li>
-            <a class="footer-link font-weight-light" href="#">
-              Android App
-            </a>
-          </li>
-          <li>
-            <a class="footer-link font-weight-light" href="#">
-              ios App
+            <a class="footer-link font-weight-light" href="https://github.com/YajingLiu2357">
+              Github
             </a>
           </li>
         </ul>
       </div>
       <div class="col-md-3 col-6">
         <ul style="list-style-type: none">
-          <li class="text-light font weight-bold pb-2">Let us help you</li>
+          <li class="text-light font weight-bold pb-2">About me</li>
           <li>
-            <a class="footer-link font-weight-light" href="#">
-              About us
-            </a>
-          </li>
-          <li>
-            <a class="footer-link font-weight-light" href="#">
-              Android App
-            </a>
-          </li>
-          <li>
-            <a class="footer-link font-weight-light" href="#">
-              ios App
+            <a class="footer-link font-weight-light" href="https://github.com/YajingLiu2357">
+              Github
             </a>
           </li>
         </ul>

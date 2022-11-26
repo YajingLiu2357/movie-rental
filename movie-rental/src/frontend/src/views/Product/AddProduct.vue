@@ -64,7 +64,7 @@ export default {
         imageURL: this.imageURL,
         price: this.price,
       };
-      axios.post(this.baseURL+"/api/product/add", newProduct)
+      axios.post(this.baseURL+"product/add", newProduct)
           .then(() =>{
             this.$router.push({name: 'AdminProduct'});
             swal({

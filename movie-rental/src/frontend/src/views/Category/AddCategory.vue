@@ -48,10 +48,10 @@ export default {
         description: this.description,
         imageUrl: this.imageUrl,
       };
-      const baseUrl = "http://localhost:8080";
+      const baseUrl = "https://limitless-lake-55070.herokuapp.com";
       axios({
         method: 'post',
-        url: `${baseUrl}/api/category/create`,
+        url: `${baseUrl}/category/create`,
         data: JSON.stringify(newCategory),
         headers:{
           'Content-Type': 'application/json',

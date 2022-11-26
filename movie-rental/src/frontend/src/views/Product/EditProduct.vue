@@ -55,7 +55,7 @@ export default {
   methods:{
     async editProduct(){
       console.log('product', this.product);
-      await axios.post(`${this.baseURL}/product/update/${this.product.id}`, this.product)
+      await axios.post(`${this.baseURL}product/update/${this.product.id}`, this.product)
           .then(() =>{
             this.$emit("fetchData");
             this.$router.push({name: "AdminProduct"});

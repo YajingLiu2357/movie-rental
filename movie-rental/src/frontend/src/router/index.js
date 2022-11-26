@@ -31,10 +31,10 @@ const routes = [
   {
     path: '/admin/category',
     name: 'Category',
-    Component: Category
+    component: Category
   },
   {
-    path: '/admin/category/edit/:id',
+    path: '/admin/category/:id',
     name: 'EditCategory',
     component: EditCategory
   },

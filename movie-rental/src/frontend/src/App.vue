@@ -1,4 +1,5 @@
 <template>
+  <Navbar />
   <router-view v-if="categories && products" style="mini-height: 60vh"
       :baseURL = "baseURL"
       :categories="categories"
@@ -10,17 +11,14 @@
 </template>
 
 <script>
-// import Navbar from "./components/Navbar.vue";
+import Navbar from "./components/Navbar.vue";
 import axios from "axios";
 import Footer from "./components/Footer";
 export default {
-  components: {
-    Footer
-    //Navbar,
-  },
+  components: {Navbar, Footer},
   data(){
     return {
-      baseURL : "http://localhost:8080",
+      baseURL : "https://limitless-lake-55070.herokuapp.com/",
       products: null,
       categories: null,
 
@@ -29,13 +27,13 @@ export default {
   methods: {
     async fetchData(){
       // api call to get all categories
-      await axios.get(this.baseURL + "/api/category/")
+      await axios.get(this.baseURL + "category/")
           .then(res => {
             this.categories = res.data;
           }).catch(err => console.log('err', err));
 
       // api call to get all products
-      await axios.get(this.baseURL + "/api/product/")
+      await axios.get(this.baseURL + "product/")
           .then(res => {
             this.products = res.data;
           }).catch(err => console.log('err', err));
