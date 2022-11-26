@@ -1,18 +1,21 @@
 <template>
-  <router-view v-if="categories && products"
+  <router-view v-if="categories && products" style="mini-height: 60vh"
       :baseURL = "baseURL"
       :categories="categories"
       :products="products"
       @fetchData="fetchData"
   >
   </router-view>
+  <Footer/>
 </template>
 
 <script>
 // import Navbar from "./components/Navbar.vue";
 import axios from "axios";
+import Footer from "./components/Footer";
 export default {
   components: {
+    Footer
     //Navbar,
   },
   data(){
