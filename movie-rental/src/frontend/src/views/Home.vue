@@ -11,7 +11,7 @@
       </div>
       <hr/>
     </div>
-    <div class="container">
+<!--    <div class="container">
       <div class="row">
         <div class="col-12 text-center">
           <h2 class="pt-3" id="start-shopping"> Top Categories</h2>
@@ -23,39 +23,55 @@
         </div>
       </div>
 
-    </div>
-    <div class="container py-2">
+    </div>-->
+    <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h2 class="pt-3"> Top Products</h2>
+          <h2 class="pt-3" id="start-shopping"> Top Movies</h2>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div v-for="index in this.productSize" :key="index"
-           class="col-md-6 col-xl-4 col-12 pt-3 justify-content-around d-flex">
-        <ProductBox :product="products[index-1]"/>
+      <div class="row">
+        <div v-for="index in this.movieSize" :key="index" class="col-md-6 col-xl-4 col-12 pt-3 justify-content-around d-flex">
+          <MovieBox :movie="movies[index-1]"/>
+        </div>
       </div>
+
     </div>
+<!--    <div class="container py-2">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="pt-3"> Top Movies</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div v-for="index in this.productSize" :key="index"
+             class="col-md-6 col-xl-4 col-12 pt-3 justify-content-around d-flex">
+          <ProductBox :product="products[index-1]"/>
+        </div>
+      </div>
+    </div>-->
   </div>
 </template>
 
 <script>
-import CategoryBox from "../components/Category/CategoryBox";
-import ProductBox from "../components/ProductBox";
+/*import CategoryBox from "../components/Category/CategoryBox";
+import ProductBox from "../components/ProductBox";*/
+import MovieBox from "../components/MovieBox";
 export default {
   name: 'Home',
-  components: {CategoryBox,ProductBox},
-  props: ["categories", "products"],
+  components:{MovieBox} /*{CategoryBox,ProductBox, MovieBox}*/,
+  props: ["movies"]/*["categories", "products", "movies"]*/,
   data(){
     return {
-      categorySize: 0,
-      productSize: 0,
+      /*categorySize: 0,
+      productSize: 0,*/
+      movieSize: 0,
     }
   },
   mounted() {
-    this.categorySize = Math.min(this.categories.length, 6);
-    this.productSize = Math.min(this.products.length, 8);
+    /*this.categorySize = Math.min(this.categories.length, 6);
+    this.productSize = Math.min(this.products.length, 8);*/
+    this.movieSize = Math.min(this.movies.length, 8);
   },
 }
 </script>

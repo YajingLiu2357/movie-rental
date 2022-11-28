@@ -27,10 +27,10 @@ public class ProductController {
     public ResponseEntity<ApiResponse> createProduct(@RequestBody ProductDto productDto) {
         Optional<Category> optionalCategory = categoryRepo.findById(productDto.getCategoryId());
         if (!optionalCategory.isPresent()){
-            return new ResponseEntity<>(new ApiResponse(false, "category does not exist"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<ApiResponse>(new ApiResponse(false, "category does not exist"), HttpStatus.BAD_REQUEST);
         }
         productService.createProduct(productDto, optionalCategory.get());
-        return new ResponseEntity<>(new ApiResponse(true, "product has been added"), HttpStatus.CREATED);
+        return new ResponseEntity<ApiResponse>(new ApiResponse(true, "product has been added"), HttpStatus.CREATED);
     }
 
     @GetMapping("/")
@@ -40,7 +40,7 @@ public class ProductController {
     }
 
     @PostMapping("/update/{productId}")
-    public ResponseEntity<ApiResponse> updateProduct(@PathVariable ("productId") Integer productId, @RequestBody ProductDto productDto) {
+    public ResponseEntity<ApiResponse> updateProduct(@PathVariable ("productId") Integer productId, @RequestBody ProductDto productDto) throws Exception{
         Optional<Category> optionalCategory = categoryRepo.findById(productDto.getCategoryId());
         if (!optionalCategory.isPresent()){
             return new ResponseEntity<>(new ApiResponse(false, "category does not exist"), HttpStatus.BAD_REQUEST);

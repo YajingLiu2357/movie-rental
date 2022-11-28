@@ -1,16 +1,20 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import AddCategory from '../views/Category/AddCategory.vue'
-import Category from '../views/Category/Category.vue'
+/*import AddCategory from '../views/Category/AddCategory.vue'
+import Category from '../views/Category/Category.vue'*/
 import Admin from '../views/Admin';
-import Product from "../views/Product/Product";
+/*import Product from "../views/Product/Product";
 import AddProduct from "../views/Product/AddProduct";
 import EditCategory from "../views/Category/EditCategory";
 import EditProduct from "../views/Product/EditProduct";
 import ShowDetails from "../views/Product/ShowDetails";
-import ListProducts from "../views/Category/ListProducts";
+import ListProducts from "../views/Category/ListProducts";*/
 import Signup from "../views/Signup";
 import Signin from "../views/Signin";
+import AddMovie from "@/views/Movie/AddMovie";
+import Movie from "@/views/Movie/Movie";
+import EditMovie from "@/views/Movie/EditMovie";
+import MovieDetail from "@/views/Movie/MovieDetail";
 
 const routes = [
   {
@@ -18,7 +22,7 @@ const routes = [
     name: 'Home',
     component: Home
   },
-  {
+  /*{
     path: '/category/show/:id',
     name: 'ListProducts',
     component: ListProducts
@@ -37,15 +41,15 @@ const routes = [
     path: '/admin/category/:id',
     name: 'EditCategory',
     component: EditCategory
-  },
+  },*/
   {
     path: '/admin',
     name: 'Admin',
     component: Admin
   },
-  {
+  /*{
     path: '/admin/product',
-    name: 'AdminProduct',
+    name: 'Product',
     component: Product
   },
   {
@@ -57,12 +61,12 @@ const routes = [
     path: '/admin/product/edit/:id',
     name: 'EditProduct',
     component: EditProduct
-  },
-  {
+  },*/
+  /*{
     path: '/product/show/:id',
     name: 'ShowDetails',
     component: ShowDetails
-  },
+  },*/
   {
     path: '/signup',
     name: 'Signup',
@@ -72,7 +76,27 @@ const routes = [
     path: '/signin',
     name: 'Signin',
     component: Signin
-  }
+  },
+  {
+    path: '/admin/movie/add',
+    name: 'AddMovie',
+    component: AddMovie
+  },
+  {
+    path: '/admin/movie',
+    name: 'Movie',
+    component: Movie
+  },
+  {
+    path: '/admin/movie/:id',
+    name: 'EditMovie',
+    component: EditMovie
+  },
+  {
+    path: '/movie/show/:id',
+    name: 'MovieDetail',
+    component: MovieDetail
+  },
 ]
 
 const router = createRouter({

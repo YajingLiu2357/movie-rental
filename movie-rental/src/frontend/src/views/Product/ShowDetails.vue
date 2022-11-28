@@ -1,19 +1,17 @@
 <template>
 <div class="container">
   <div class="row pt-5">
-    <div class="col-md-1">
-      <div class="col-md-4 col-12">
-        <img :src="product.imageURL" class="img-fluid">
-      </div>
-      <div class="col-md-6 col-12 pt-3 pt-md-0">
-        <h4>{{product.name}}</h4>
-        <h6 class="category font-italic">{{category.categoryName}}</h6>
-        <h6 class="font-weight-bold">${{product.price}}</h6>
-        <p>
-          {{product.description}}
-        </p>
-      </div>
-
+    <div class="col-md-1"></div>
+    <div class="col-md-4 col-12">
+      <img :src="product.imageURL" class="img-fluid">
+    </div>
+    <div class="col-md-6 col-12 pt-3 pt-md-0">
+      <h4>{{product.name}}</h4>
+      <h6 class="category font-italic">{{category.categoryName}}</h6>
+      <h6 class="font-weight-bold">${{product.price}}</h6>
+      <p>
+        {{product.description}}
+      </p>
     </div>
   </div>
 </div>

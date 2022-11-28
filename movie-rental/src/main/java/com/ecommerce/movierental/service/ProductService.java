@@ -47,11 +47,11 @@ public class ProductService {
         return productDtos;
     }
 
-    public void updateProduct(ProductDto productDto, Integer productId) {
+    public void updateProduct(ProductDto productDto, Integer productId) throws Exception{
         Optional<Product> optionalProduct = productRepo.findById(productId);
         // throw an exception if product does not exist
         if (!optionalProduct.isPresent()){
-            throw new RuntimeException("product not present");
+            throw new Exception("product not present");
         }
         Product product = optionalProduct.get();
         product.setDescription(productDto.getDescription());

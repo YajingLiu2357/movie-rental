@@ -1,10 +1,13 @@
 package com.ecommerce.movierental.dto;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.validation.constraints.NotNull;
 
 public class ProductDto {
     // for create it can be optional
     // for update we need the id
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private @NotNull String name;
     private @NotNull String imageURL;

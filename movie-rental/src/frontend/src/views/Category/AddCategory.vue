@@ -29,8 +29,7 @@
   </div>
 </template>
 <script>
-
-const axios = require('axios');
+import axios from 'axios';
 const sweetalert = require('sweetalert');
 export default {
   data() {
@@ -49,14 +48,9 @@ export default {
         imageUrl: this.imageUrl,
       };
       const baseUrl = "http://localhost:8080";
-      axios({
-        method: 'post',
-        url: `${baseUrl}/category/create`,
-        data: JSON.stringify(newCategory),
-        headers:{
-          'Content-Type': 'application/json',
-        }
-      }).then(() => {
+      axios.post(`${baseUrl}/category/create`, newCategory)
+          .then(() => {
+            this.$router.push({name: "Category"});
         sweetalert({
           text: 'Category added successfully',
           icon: 'success',

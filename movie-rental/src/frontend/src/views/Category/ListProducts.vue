@@ -15,19 +15,25 @@
 </template>
 
 <script>
+import ProductBox from "../../components/ProductBox";
 export default {
   name: "ListProducts",
+  components: {
+    ProductBox
+  },
   data(){
     return {
       id: null,
       category:{},
-      msg: ''
+      msg: '',
+      //products: null,
     }
   },
-  props: ["categories"],
+  props: ["categories", "products"],
   mounted() {
     this.id = this.$route.params.id;
     this.category = this.categories.find(category => category.id == this.id);
+    //this.products = this.products.filter(product => product.categoryId == this.id);
     if (this.category.products.length == 0){
       this.msg = "No products in this category yet";
     }else if (this.category.products.length == 1){
@@ -35,7 +41,7 @@ export default {
     }else{
       this.msg = this.category.products.length + " products found"
     }
-  },
+  }
 }
 </script>
 
