@@ -1,13 +1,5 @@
 <template>
   <Navbar />
-<!--  <router-view v-if="categories && products && movies" style="mini-height: 60vh"
-      :baseURL = "baseURL"
-      :categories="categories"
-      :products="products"
-      :movies="movies"
-      @fetchData="fetchData"
-  >
-  </router-view>-->
 
   <router-view v-if="movies" style="mini-height: 60vh"
                :baseURL = "baseURL"
@@ -27,25 +19,12 @@ export default {
   data(){
     return {
       baseURL : "http://localhost:8080/",
-      /*products: null,
-      categories: null,*/
       movies: null
 
     }
   },
   methods: {
     async fetchData(){
-      // api call to get all categories
-     /* await axios.get(this.baseURL + "category/")
-          .then(res => {
-            this.categories = res.data;
-          }).catch(err => console.log('err', err));
-
-      // api call to get all products
-      await axios.get(this.baseURL + "product/")
-          .then(res => {
-            this.products = res.data;
-          }).catch(err => console.log('err', err));*/
       await axios.get(this.baseURL + "movie/")
           .then(res => {
             this.movies = res.data;

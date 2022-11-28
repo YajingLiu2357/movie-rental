@@ -9,17 +9,32 @@
       </router-link>
       <p class="card-text">{{ movie.description }}</p>
       <router-link :to="{name: 'EditMovie', params: {id: movie.id}}" v-show="$route.name == 'Movie'">
-        <button class="btn btn-primary">Edit</button>
+        <button class="btn btn-primary mr-1">Edit</button>
       </router-link>
+      <button class="btn btn-primary ml-1" @click="deleteMovie" v-show="$route.name == 'Movie'">Delete</button>
     </div>
   </div>
 </template>
 <script>
-
+import axios from 'axios';
+import sweetalert from 'sweetalert';
 export default {
   name: "MovieBox",
   props: ["movie"],
   methods:{
+    deleteMovie(){
+      const baseUrl = "http://localhost:8080";
+      axios.delete(`${baseUrl}/movie/delete/${this.movie.id}`)
+          .then(() => {
+            this.$router.push({name: "Movie"});
+            sweetalert({
+              text: 'Movie deleted successfully',
+              icon: 'success',
+            });
+          }).catch((error) => {
+        console.log(error);
+      });
+    }
 
   }
 }

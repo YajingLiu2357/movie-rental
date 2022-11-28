@@ -5,6 +5,7 @@ import com.ecommerce.movierental.repository.MovieRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -19,7 +20,7 @@ public class MovieService {
     }
 
     public void editMovie(int movieId, Movie updateMovie) {
-        Movie movie = movieRepo.getById(movieId);
+        Movie movie = movieRepo.getReferenceById(movieId);
         movie.setTitle(updateMovie.getTitle());
         movie.setDescription(updateMovie.getDescription());
         movie.setImageUrl(updateMovie.getImageUrl());
@@ -37,5 +38,9 @@ public class MovieService {
 
     public boolean findById(int movieId) {
         return movieRepo.findById(movieId).isPresent();
+    }
+
+    public void deleteMovie(int movieId) {
+        movieRepo.deleteById(movieId);
     }
 }

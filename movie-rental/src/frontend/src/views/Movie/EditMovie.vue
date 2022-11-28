@@ -57,8 +57,8 @@
             <label for="categoryName">Estimated Box-Office Revenue</label>
             <input type="text" class="form-control" v-model="movie.revenue">
           </div>
-          <button type="submit" class="btn btn-primary" @click="editMovie">Edit Movie</button>
         </form>
+        <button type="submit" class="btn btn-primary" v-on:click="editMovie">Edit Movie</button>
       </div>
       <div class="col-3"></div>
     </div>
@@ -67,7 +67,7 @@
 
 <script>
 import axios from 'axios';
-import swal from 'sweetalert';
+import sweetalert from 'sweetalert';
 export default {
   name: "EditMovie",
   data(){
@@ -77,13 +77,13 @@ export default {
     }
   },
   props: ["baseURL", "movies"],
-  method:{
-    async editMovie(){
+  methods:{
+   async editMovie(){
       await axios.post(`${this.baseURL}movie/update/${this.id}`, this.movie)
           .then(() => {
             this.$emit("fetchData");
             this.$router.push({name: "MovieDetail", params: {id: this.id}});
-            swal({
+            sweetalert({
               text: "Movie has been updated successfully",
               icon: "success",
             })

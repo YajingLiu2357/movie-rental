@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @Autowired
     UserService userService;
-    @PostMapping("/signup")
+    @PostMapping("/signUp")
     public ResponseDto signup(@RequestBody SignupDto signupDto){
         return userService.signUp(signupDto);
     }
-    @PostMapping("/signin")
+    @PostMapping("/signIn")
     public SignInResponseDto signin(@RequestBody SignInDto signInDto){
         return userService.signIn(signInDto);
     }

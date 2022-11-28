@@ -105,7 +105,7 @@ export default {
       const baseUrl = "http://localhost:8080";
       axios.post(`${baseUrl}/movie/create`, newMovie)
           .then(() => {
-            this.$router.push({name: "MovieDetail", params: {id: this.id}});
+            this.$router.push({name: "Movie"});
             sweetalert({
               text: 'Movie added successfully',
               icon: 'success',

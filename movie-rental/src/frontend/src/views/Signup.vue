@@ -70,11 +70,11 @@ export default {
           password: this.password
         }
         console.log('user', user);
-        await axios.post('${this.baseURL}user/signup', user)
+        await axios.post(`${this.baseURL}user/signUp`, user)
             .then(() => {
               this.$router.replace('/');
               swal({
-                text: "User signup successfull, please login",
+                text: "User signup successfully, please login",
                 icon: "success",
               })
             }).catch(err => console.log('err', err));

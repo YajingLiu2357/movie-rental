@@ -44,6 +44,24 @@ public class Movie {
     @Column(name = "revenue")
     private @NotBlank String revenue;
 
+    public Movie() {
+    }
+
+    public Movie(String title, String description, String imageUrl, String year, String genre, String leadingActor, String studio, String director, String length, String rentalPrice, String costProduction, String revenue) {
+        this.title = title;
+        this.description = description;
+        this.imageUrl = imageUrl;
+        this.year = year;
+        this.genre = genre;
+        this.leadingActor = leadingActor;
+        this.studio = studio;
+        this.director = director;
+        this.length = length;
+        this.rentalPrice = rentalPrice;
+        this.costProduction = costProduction;
+        this.revenue = revenue;
+    }
+
     public Integer getId() {
         return id;
     }
