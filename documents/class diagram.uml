@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="80.41534603594803" y="202.82157774065115">com.ecommerce.movierental.repository.MovieRepo</node>
+    <node x="1782.407516591846" y="-616.1665642727205">com.ecommerce.movierental.model.User</node>
+    <node x="3722.221024553193" y="617.7321916634438">com.ecommerce.movierental.repository.TokenRepo</node>
+    <node x="2728.054240768515" y="-262.1665642727205">com.ecommerce.movierental.repository.UserRepo</node>
+    <node x="2244.8512646985737" y="-616.1665642727205">com.ecommerce.movierental.controller.UserController</node>
+    <node x="2331.1962190862528" y="415.28220868432675">com.ecommerce.movierental.dto.user.SignInResponseDto</node>
+    <node x="562.2745837817458" y="-727.4184070095647">com.ecommerce.movierental.model.Movie</node>
+    <node x="1828.77633061879" y="415.28220868432675">com.ecommerce.movierental.dto.user.SignInDto</node>
+    <node x="5.415346035948033" y="-199.57281879285358">com.ecommerce.movierental.service.MovieService</node>
+    <node x="2646.3549687747513" y="-616.1665642727205">com.ecommerce.movierental.service.UserService</node>
+    <node x="3951.520557978127" y="388.4550291155557">com.ecommerce.movierental.service.AuthenticationService</node>
+    <node x="47.43373575951193" y="-727.4184070095647">com.ecommerce.movierental.controller.MovieController</node>
+    <node x="1443.7414526662133" y="415.28220868432675">com.ecommerce.movierental.dto.user.SignupDto</node>
+    <node x="1848.8475606223953" y="-67.44217779419688">com.ecommerce.movierental.model.AuthenticationToken</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.ecommerce.movierental.service.UserService" target="com.ecommerce.movierental.repository.UserRepo" relationship="TO_ONE">
+      <point x="0.0" y="82.5" />
+      <point x="2805.3549687747513" y="-209.1665642727205" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="com.ecommerce.movierental.service.MovieService" target="com.ecommerce.movierental.repository.MovieRepo" relationship="TO_ONE">
+      <point x="-103.5" y="-29.69469984248815" />
+      <point x="60.70857732952008" y="-135.76751863534173" />
+      <point x="60.70857732952008" y="216.82157774065115" />
+      <point x="66.0" y="0.0" />
+    </edge>
+    <edge source="com.ecommerce.movierental.controller.UserController" target="com.ecommerce.movierental.service.UserService" relationship="TO_ONE">
+      <point x="0.0" y="-60.5" />
+      <point x="2383.3512646985737" y="242.22381048160003" />
+      <point x="2675.61582001813" y="242.22381048160003" />
+      <point x="-129.7391487566215" y="-82.5" />
+    </edge>
+    <edge source="com.ecommerce.movierental.service.UserService" target="com.ecommerce.movierental.service.AuthenticationService" relationship="TO_ONE">
+      <point x="157.47777554293316" y="-82.5" />
+      <point x="2962.8327443176845" y="370.9550291155557" />
+      <point x="4120.280887251195" y="370.9550291155557" />
+      <point x="-7.239670726931763" y="-60.5" />
+    </edge>
+    <edge source="com.ecommerce.movierental.service.AuthenticationService" target="com.ecommerce.movierental.repository.TokenRepo" relationship="TO_ONE">
+      <point x="0.0" y="60.5" />
+      <point x="4127.520557978127" y="677.1351510267807" />
+      <point x="1502.5973499212441" y="677.1351510267807" />
+      <point x="1502.5973499212441" y="644.2321916634438" />
+      <point x="-140.5" y="0.0" />
+    </edge>
+    <edge source="com.ecommerce.movierental.model.AuthenticationToken" target="com.ecommerce.movierental.model.User" relationship="TO_ONE">
+      <point x="107.00000000000023" y="-48.04143999016026" />
+      <point x="2072.4322324041746" y="55.016382215642864" />
+      <point x="2072.4322324041746" y="-412.6665642727205" />
+      <point x="-129.0" y="0.0" />
+    </edge>
+    <edge source="com.ecommerce.movierental.controller.MovieController" target="com.ecommerce.movierental.service.MovieService" relationship="TO_ONE">
+      <point x="-195.5" y="42.56256522489912" />
+      <point x="833.3782426291375" y="-602.3558417846656" />
+      <point x="833.3782426291375" y="-106.07281879285358" />
+      <point x="103.5" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.5473793772516135" showDependencies="true" x="1863.6531477974922" y="211.97939617091095" />
+  <SelectedNodes>
+    <node>com.ecommerce.movierental.dto.user.SignInResponseDto</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

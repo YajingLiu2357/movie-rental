@@ -7,6 +7,7 @@ import AddMovie from "@/views/Movie/AddMovie";
 import Movie from "@/views/Movie/Movie";
 import EditMovie from "@/views/Movie/EditMovie";
 import MovieDetail from "@/views/Movie/MovieDetail";
+import Search from "@/views/Search";
 
 const routes = [
   {
@@ -49,6 +50,11 @@ const routes = [
     name: 'MovieDetail',
     component: MovieDetail
   },
+  {
+    path: '/search/:searchValue',
+    name: 'Search',
+    component: Search
+  }
 ]
 
 const router = createRouter({

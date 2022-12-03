@@ -23,10 +23,11 @@
         placeholder="Search"
         aria-label="Username"
         aria-describedby="basic-addon1"
+        v-model="searchValue"
       />
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="search-button-navbar">
-          <svg
+<!--      <div class="input-group-prepend">
+&lt;!&ndash;        <span class="input-group-text" id="search-button-navbar">
+&lt;!&ndash;          <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
@@ -36,10 +37,13 @@
           >
             <path
                 d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"            />
-          </svg>
-        </span>
-      </div>
+          </svg>&ndash;&gt;
+        </span>&ndash;&gt;
+      </div>-->
     </form>
+    <button class="btn btn-outline-success my-2 my-sm-0" @click="Search">
+      Search
+    </button>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarAccount" data-toggle="dropdown">Account</a>
@@ -57,7 +61,18 @@
 
 <script>
 export default {
-  name: "Navbar"
+  name: "Navbar",
+  data () {
+    return {
+      searchValue: "",
+    }
+  },
+  methods: {
+    Search () {
+      this.$router.push({ name: 'Search', params: { searchValue: this.searchValue } })
+    }
+  }
+
 }
 </script>
 
